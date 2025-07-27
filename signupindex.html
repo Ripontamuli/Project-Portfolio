@@ -1,0 +1,126 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5f00ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #4500c2;
+    }
+    .terms {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .terms a {
+      color: blue;
+      text-decoration: none;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .login-link a {
+      color: blue;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="password" id="password" placeholder="Create Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+      <div class="terms">
+        <label>
+          <input type="checkbox" id="terms" required>
+          I agree to the <a href="./terms.html" target="_blank">Terms of Service</a>
+        </label>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="login-link">
+      Already have an account? <a href="./login.html">Login Here</a>
+    </div>
+  </div>
+
+  <script>
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Get all input fields inside the form
+    const inputs = document.querySelectorAll("#signupForm input[type='text'], #signupForm input[type='email'], #signupForm input[type='tel'], #signupForm input[type='password']");
+    let allFilled = true;
+
+    inputs.forEach(input => {
+      if (input.value.trim() === "") {
+        allFilled = false;
+      }
+    });
+
+    // Check if checkbox is ticked
+    const termsChecked = document.getElementById("terms").checked;
+
+    if (!allFilled || !termsChecked) {
+      alert("Please fill in all the fields and agree to the Terms of Service.");
+      return;
+    }
+
+    // Redirect if all fields are filled
+    window.location.href = "./selecting.html";
+  });
+</script>
+
+</body>
+</html>

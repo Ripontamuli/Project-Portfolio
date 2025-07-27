@@ -1,0 +1,154 @@
+<!---<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./submitfeedback.html">
+    <textarea name="feed back" placeholder="Please add Feedback"></textarea> 
+    <br>
+    <select name="rate this project">
+        <option value="😞 Poor">😞 Poor</option>
+        <option value="😐 Average">😐 Average</option>
+        <option value="🙂 Good">🙂 Good</option>
+        <option value="😄 Great">😄 Great</option>
+         <option value="🤩 Excellent">🤩 Excellent</option>
+       
+
+    </select>
+    <br><br><br><br><br><br>
+    <pre>
+
+
+<input type=submit value="submit"></form></pre>
+    
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .feedback-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.6em;
+      color: #333;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+      color: #333;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      font-size: 1em;
+      margin-bottom: 20px;
+      font-family: inherit;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feedback-container">
+    <h2>Feedback</h2>
+
+    <form id="feedbackForm">
+      <label for="comment">Your Feedback</label>
+      <textarea id="comment" name="comment" rows="4" placeholder="Please add feedback..."></textarea>
+
+      <label for="emoji">How was your experience?</label>
+      <select id="emoji" name="emoji">
+        <option value="">😊 Select one</option>
+        <option value="Excellent">😍 Excellent</option>
+        <option value="Good">🙂 Good</option>
+        <option value="Average">😐 Average</option>
+        <option value="Poor">😕 Poor</option>
+        <option value="Terrible">😡 Terrible</option>
+      </select>
+
+      <div class="error" id="errorMsg"></div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const comment = document.getElementById("comment").value.trim();
+      const emoji = document.getElementById("emoji").value;
+
+      if (comment === "") {
+        document.getElementById("errorMsg").textContent = "Please enter your feedback before submitting.";
+        return;
+      }
+
+      // Optional: Save feedback locally or send to server here
+
+      // Redirect to another page
+      window.location.href = "./submitfeedback.html";
+    });
+  </script>
+
+</body>
+</html>

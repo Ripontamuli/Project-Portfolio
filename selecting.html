@@ -1,0 +1,229 @@
+<!---<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <form action="./Submit.html">
+    <h1><u>Registration Form</u></h1>
+   <h3>Select Your Class:</h3>
+<label for="ID!">
+<input type="radio" valaue="class=IX" name="class" id="ID1">Class IX
+<br>
+</label>
+<label for="ID2">
+  <input type="radio" valaue="class=X" name="class" id="ID2">Class X
+</label>
+<br>
+<label for="ID3">
+    <input type="radio" value="Class XI" name="class"id=ID3>Class XI
+</label>
+<br>
+<label for="ID4">
+    <input type="radio" value="Class XII" name="class"id=ID4>Class XII
+</label>
+<br><br>
+<h3>Select your favourite subject:</h3>
+<label for="id101">
+    <input type="checkbox" value="subject"name=accounts id="101">Accounts
+
+</label>
+<br>
+<label for="id102">
+    <input type="checkbox" value="subject"name=Business id="102">Business Studies
+
+</label>
+<br>
+<label for="id103">
+    <input type="checkbox" value="subject"name=Economics id="103">Economics
+
+</label>
+<br>
+<label for="id104">
+    <input type="checkbox" value="subject"name=AEC id="104">AEC(Alternative English)
+
+</label>
+<br>
+<label for="id105">
+    <input type="checkbox" value="subject"name=Maths id="105">Maths
+
+</label>
+<br>
+<label for="id106">
+    <input type="checkbox" value="subject"name=computer science id="106">Computer science
+
+</label>
+<br><br>
+
+
+<br>
+<b>Select your City</b> <select name="City"id =city>
+    <option value="kalain">Silchar</option>
+    <option value="Sribhumi">Sribhumi</option>
+    <option value="Hailakandi">Hailakandi</option>
+    <option value="Kalain">Kalain</option>
+    <option valuue="gumra">Gumra</option>
+    <option value="digorkhal">Digorkhal</option>
+</select> 
+<br><br><pre>
+
+
+
+
+<b>Gender:</b>
+<label for="67">
+    <input type="radio"value="male" name="gender"id=67>Male
+</label>
+
+<label for="40">
+    <input type="radio"value="Female"  name="gender"id=40>Female
+</label></pre>
+<pre>  
+    
+         <input type="submit" value="submit"></pre></form>
+
+</body>
+</html>--->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px 40px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section label {
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .gender {
+      margin-top: 10px;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      margin: 20px auto 0;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form action="./submit.html">
+
+      <div class="section">
+        <label>Select Your Class:</label>
+        <label><input type="radio" name="class" value="IX" required> Class IX</label>
+        <label><input type="radio" name="class" value="X"> Class X</label>
+        <label><input type="radio" name="class" value="XI"> Class XI</label>
+        <label><input type="radio" name="class" value="XII"> Class XII</label>
+      </div>
+
+      <div class="section">
+        <label>Select your favourite subject:</label>
+        <label><input type="checkbox" name="subject" value="Accounts"> Accounts</label>
+        <label><input type="checkbox" name="subject" value="Business Studies"> Business Studies</label>
+        <label><input type="checkbox" name="subject" value="Economics"> Economics</label>
+        <label><input type="checkbox" name="subject" value="AEC"> AEC (Alternative English)</label>
+        <label><input type="checkbox" name="subject" value="Maths"> Maths</label>
+        <label><input type="checkbox" name="subject" value="CS"> Computer Science</label>
+      </div>
+
+      <div class="section">
+        <label for="city">Select your City:</label>
+        <select id="city" name="city" required> 
+           
+          <option value="">-- Select --</option>
+            <option value="Kalain">Kalain</option>
+            <option value="Silchar">Silchar</option>
+          <option value="Guwahati">Guwahati</option>
+          <option value="Dibrugarh">Dibrugarh</option>
+         
+      
+        </select>
+      </div>
+
+      <div class="section gender">
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      // You can add form validation here if needed
+      window.location.href = "./submit.html"; // Redirect after form "submission"
+    });
+  </script>
+
+</body>
+</html>
